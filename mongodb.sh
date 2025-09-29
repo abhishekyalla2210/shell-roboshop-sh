@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./common.sh
-
+APP_NAME=mongod
 
 CHECK_ROOT
 

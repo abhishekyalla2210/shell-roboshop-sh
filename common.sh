@@ -96,7 +96,7 @@ SYSTEM_SETUP(){
     VALIDATE $? "Enable $APP_NAME"
 }
 APP_RESTART(){
-systemctl restart $APP_NAME
+systemctl start $APP_NAME
     VALIDATE $? "Restarted $APP_NAME"
 }
 
