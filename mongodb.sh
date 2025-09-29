@@ -7,19 +7,18 @@ CHECK_ROOT
 
 
 cp mongo.repo /etc/yum.repos.d/mongo.repo
-VALIDATE $? "adding the repo"
+VALIDATE $? "Adding Mongo repo"
 
-dnf install mongodb-org -y &>>$LOGFILE
-VALIDATE $? "mongodb installation"
+dnf install mongodb-org -y &>>$LOG_FILE
+VALIDATE $? "Installing MongoDB"
 
-systemctl enable mongod
-VALIDATE $? "enabled mongodb"
+systemctl enable mongod &>>$LOG_FILE
+VALIDATE $? "Enable MongoDB"
 
-systemctl start mongod
-VALIDATE $? "started mongodb"
+systemctl start mongod 
+VALIDATE $? "Start MongoDB"
 
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf
-VALIDATE $? "allowing all"
-
+VALIDATE $? "Allowing remote connections to MongoDB"
 APP_RESTART
 PRINT_TOTAL_TIME
