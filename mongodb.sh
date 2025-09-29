@@ -3,22 +3,24 @@
 source ./common.sh
 APP_NAME=mongod
 
+
 CHECK_ROOT
 
 
 cp mongo.repo /etc/yum.repos.d/mongo.repo
-VALIDATE $? "Adding Mongo repo"
+VALIDATE $? "adding the repo"
 
-dnf install mongodb-org -y &>>$LOG_FILE
-VALIDATE $? "Installing MongoDB"
+dnf install mongodb-org -y &>>$LOGFILE
+VALIDATE $? "mongodb installation"
 
-systemctl enable mongod &>>$LOG_FILE
-VALIDATE $? "Enable MongoDB"
+systemctl enable mongod
+VALIDATE $? "enabled mongodb"
 
-systemctl start mongod 
-VALIDATE $? "Start MongoDB"
+systemctl start mongod
+VALIDATE $? "started mongodb"
 
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf
-VALIDATE $? "Allowing remote connections to MongoDB"
+VALIDATE $? "allowing all"
+
 APP_RESTART
 PRINT_TOTAL_TIME

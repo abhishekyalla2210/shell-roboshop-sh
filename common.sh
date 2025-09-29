@@ -10,7 +10,7 @@ N="\e[0m"
 
 LOGS="/var/log/shell-robotshop"
 SCRIPTNAME=$(echo $0 | cut -d "." -f1)
-LOG_FILE="$LOGS/$SCRIPTNAME.log"
+LOGFILE="$LOGS/$SCRIPTNAME.log"
 SCRIPT_DIR=$(pwd)
 MONGODB_HOST=mongodb.abhishekdev.fun
 START_TIME=$(date +%s)
