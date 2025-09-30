@@ -9,11 +9,11 @@ APP_SETUP
 JAVA_SETUP 
 SYSTEM_SETUP
 
- dnf install mysql -y &>>$LOGFILE
+ dnf install mysql -y &>>$LOG_FILE
 
  VALIDATE $? "installed mysql"
 
- mysql -h $MYSQL_ID -uroot -pRoboShop@1 -e 'use cities' &>>$LOGFILE
+ mysql -h $MYSQL_ID -uroot -pRoboShop@1 -e 'use cities' &>>$LOG_FILE
 
  if [ $? -ne 0 ]; then
  mysql -h $MYSQL_ID -uroot -pRoboShop@1 < /app/db/schema.sql 
