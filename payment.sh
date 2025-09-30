@@ -8,6 +8,9 @@ dnf install python3 gcc python3-devel -y &>>$LOG_FILE
 VALIDATE $? "looking"
 
 APP_SETUP
+pip3 install -r requirements.txt &>>$LOG_FILE
+VALIDATE $? "installing pip3"
+
 
 cp $SCRIPT_DIR/payment.service /etc/systemd/system/payment.service &>>$LOG_FILE
 VALIDATE $? "looking"
