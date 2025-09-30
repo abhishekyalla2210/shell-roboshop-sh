@@ -93,7 +93,7 @@ SYSTEM_SETUP(){
     VALIDATE $? "Copy systemctl service"
 
     systemctl daemon-reload
-    
+
     systemctl enable $APP_NAME &>>$LOG_FILE
     VALIDATE $? "Enable $APP_NAME"
 }
