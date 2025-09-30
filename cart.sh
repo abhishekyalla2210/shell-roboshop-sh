@@ -1,3 +1,10 @@
 #!/bin/bash
 
-sourc
+source ./common.sh
+
+CHECK_ROOT
+NODEJS_SETUP
+APP_SETUP
+SYSTEM_SETUP
+APP_RESTART
+PRINT_TOTAL_TIME
