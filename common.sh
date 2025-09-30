@@ -70,13 +70,13 @@ PYTHON_SETUP(){
 APP_SETUP(){
 
 id roboshop
-if [ $? -ne 0 ]; then
-    useradd --system --home /app --shell /sbin/nologin --comment "roboshop system user" roboshop  &>>$LOG_FILE
-    VALIDATE $? "creating system user" 
-else
-    echo -e "user already exist...$Y skipping $N"
-
-fi
+     if [ $? -ne 0]; then
+    useradd --system --home /app --shell /sbin/nologin --comment "roboshop system user" roboshop &>>$LOG_FILE
+    VALIDATE $? "Creating system user"
+    else
+    echo -e "User already exists ... $Y SKIPPING $N" 
+    fi
+}
  mkdir -p /app
 VALIDATE $? "created dir"
 curl -o /tmp/$APP_NAME.zip https://roboshop-artifacts.s3.amazonaws.com/$APP_NAME-v3.zip &>>$LOG_FILE
