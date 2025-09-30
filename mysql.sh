@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 source ./common.sh
-APP_NAME=mysql
+APP_NAME=mysqld
 
 CHECK_ROOT
 VALIDATE
