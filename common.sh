@@ -76,7 +76,7 @@ id roboshop
     else
     echo -e "User already exists ... $Y SKIPPING $N" 
     fi
-}
+
  mkdir -p /app
 VALIDATE $? "created dir"
 curl -o /tmp/$APP_NAME.zip https://roboshop-artifacts.s3.amazonaws.com/$APP_NAME-v3.zip &>>$LOG_FILE
