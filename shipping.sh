@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+
 source ./common.sh
 APP_NAME=shipping
 
