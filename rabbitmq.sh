@@ -25,5 +25,5 @@ VALIDATE $? "user added"
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"
 VALIDATE $? "permissions set"
 
-APP_NAME
+APP_RESTART
 PRINT_TOTAL_TIME
