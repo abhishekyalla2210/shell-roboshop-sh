@@ -4,7 +4,7 @@ source ./common.sh
 APP_NAME=rabbitmq
 
 CHECK_ROOT
-VALIDATE
+
 
 
 cp $SCRIP_NAME rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo
