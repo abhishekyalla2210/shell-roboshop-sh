@@ -91,7 +91,9 @@ VALIDATE $? "unzip $APP_NAME"
 SYSTEM_SETUP(){
     cp $SCRIPT_DIR/$APP_NAME.service /etc/systemd/system/$APP_NAME.service
     VALIDATE $? "Copy systemctl service"
+
     systemctl daemon-reload
+    
     systemctl enable $APP_NAME &>>$LOG_FILE
     VALIDATE $? "Enable $APP_NAME"
 }

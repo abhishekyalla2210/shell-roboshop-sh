@@ -4,11 +4,9 @@ source ./common.sh
 APP_NAME=catalogue
 
 CHECK_ROOT
-
+APP_SETUP
 NODEJS_SETUP
 SYSTEM_SETUP
-APP_SETUP
-
 
 
 cp $SCRIPT_DIR/mongo.repo /etc/yum.repos.d/mongo.repo
@@ -21,16 +19,6 @@ mongosh --host $MONGODB_HOST </app/db/master-data.js &>>$LOG_FILE
 VALIDATE $? "load catalogue products"
 systemctl restart catalogue
 VALIDATE $? "restarted catalogue"
-mongosh --host $MONGODB_HOST
-VALIDATE $? "hosted"
-show dbs
-VALIDATE $? "showed dbs"
-use catalogue
-VALIDATE $? "catalogue used"
-show collection
-VALIDATE $? "collected"
-db.products.find()
-VALIDATE $? "found"
 
 
 APP_RESTART
