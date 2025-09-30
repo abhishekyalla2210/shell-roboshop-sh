@@ -14,6 +14,7 @@ LOG_FILE="$LOGS/$SCRIPTNAME.log"
 SCRIPT_DIR=$(pwd)
 MONGODB_HOST=mongodb.abhishekdev.fun
 START_TIME=$(date +%s)
+MYSQL_ID=mysql.abhishekdev.fun
 
 
 
