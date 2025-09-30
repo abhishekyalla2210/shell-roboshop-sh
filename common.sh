@@ -74,7 +74,7 @@ id roboshop &>>$LOG_FILE
     useradd --system --home /app --shell /sbin/nologin --comment "roboshop system user" roboshop &>>$LOG_FILE
     VALIDATE $? "Creating system user"
     else
-    echo -e "User already exists ... $Y SKIPPING $N" | 
+    echo -e "User already exists ... $Y SKIPPING $N" 
     fi
 
 
