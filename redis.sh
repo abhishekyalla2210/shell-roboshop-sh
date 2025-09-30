@@ -1,7 +1,7 @@
 #/bin/bash
 
 source ./common.sh
-
+APP_NAME=redis
 CHECK_ROOT
 VALIDATE
 
