@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ./common.sh
+APP_NAME=cart
 
 CHECK_ROOT
 NODEJS_SETUP
