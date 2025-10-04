@@ -2,7 +2,7 @@
 
 count=1
 
-while [ $count -ne 5 ]; then
+while [ $count -lt 5 ]; then
 do
 
     echo "start counting: $count"
