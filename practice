@@ -1,5 +1,7 @@
 #!/bin/bash
 count=10
+echo "enter a number:"
+read number
 
 while [ $count -ne 0 ]
 do
