@@ -2,7 +2,7 @@
 
 count=5
 
-while (){
+while
 do
     if [ $count -ne 0 ]; then
 
