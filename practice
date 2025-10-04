@@ -1,13 +1,14 @@
 #!/bin/bash
-count=10
+count=1
 echo "enter a number:"
 read number
+n=number
 
-while [ $count -ne 0 ]
+while [ $count -ne $n ]
 do
 echo "counting: $count"
 sleep 1
-count=$((count-1))
+count=$((count +1))
 done 
 echo "times up"
 
