@@ -2,9 +2,8 @@
 
 count=5
 
-while
+while [ $count -ne 0 ]; then
 do
-    if [ $count -ne 0 ]; then
 
     echo "start counting: $count"
     count=$((count + 1))
@@ -16,4 +15,3 @@ do
 
 
 
-}
