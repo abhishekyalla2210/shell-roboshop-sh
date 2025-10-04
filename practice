@@ -1,8 +1,8 @@
 #!/bin/bash
 
-count=5
+count=1
 
-while [ $count -ne 0 ]; then
+while [ $count -ne 5 ]; then
 do
 
     echo "start counting: $count"
