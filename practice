@@ -1,0 +1,19 @@
+#!/bin/bash
+
+count=5
+
+while (){
+do
+    if [ $count -ne 0 ]; then
+
+    echo "start counting: $count"
+    count=$((count + 1))
+    done 
+    echo "loop finished"
+
+
+
+
+
+
+}
