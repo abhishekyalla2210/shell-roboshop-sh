@@ -4,7 +4,7 @@ echo "enter a number:"
 read number
 n=$number
 
-while [ $count -lt $n ]
+while [ $count -le $n ]
 do
 echo "counting: $count"
 sleep 1
