@@ -1,18 +1,13 @@
 #!/bin/bash
+count=10
 
-count=1
-
-while [ $count -lt 5 ]
+while [ $count -ne 0 ]
 do
-
-    echo "start counting: $count"
-    sleep 1
-    count=$((count + 1))
-    done 
-    echo "loop finished"
-
-
-
+echo "counting: $count"
+sleep 1
+count=$((count-1))
+done 
+echo "times up"
 
 
 
