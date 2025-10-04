@@ -2,9 +2,9 @@
 count=1
 echo "enter a number:"
 read number
-n=number
+n=$number
 
-while [ $count -ne $n ]
+while [ $count -lt $n ]
 do
 echo "counting: $count"
 sleep 1
