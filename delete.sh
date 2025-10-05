@@ -4,6 +4,9 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+$1=SOURCE_DIR
+DEST_DIR=$2
+
 
 DAYS=${3:-14}
 
