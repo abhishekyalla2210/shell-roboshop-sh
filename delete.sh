@@ -8,7 +8,6 @@ SOURCE_DIR=$2
 DEST_DIR=$2
 
 
-DAYS=${3:-14}
 
 
 LOGS_FOLDER="/var/log/shell-script"
@@ -46,12 +45,12 @@ fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -type f )
 
-if [ ! -z $FILES]; then
+if [ ! -z $FILES ]; then
 echo "files found:$FILES"
 TIMESTAMP=$(date +%F-%H-%M)
 ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.zip"
 echo "zip file name:$ZIP_FILE_NAME"
-find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS | zip -@ -j "$ZIP_FILE_NAME"
+find $SOURCE_DIR -name "*.log" -type f  | zip -@ -j "$ZIP_FILE_NAME"
 
 if [ -f $ZIP_FILE_NAME ];
 then
