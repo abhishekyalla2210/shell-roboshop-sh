@@ -24,7 +24,7 @@ fi
 
 USAGE(){
     echo -e "$R USAGE:: sudo sh 24-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS>[optional, default 14 days] $N"
-    exit 1
+exit 1
 }
 
 ### Check SOURCE_DIR and DEST_DIR passed or not ####
