@@ -1,8 +1,9 @@
 #!/bin/bash
 
 count=5
+ 
 
-echo "starting countdown:"
+echo -e " starting countdown:"
 
 while [ $count -ge 0 ]
 do
