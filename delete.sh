@@ -31,7 +31,7 @@ fi
 
 
 SOURCE_DIR=/home/ec2-user/source_dir
-DEST_DIR=/home/ec2-user/dest-file
+DEST_DIR=/home/ec2-user/dest_file
 
 if [ ! -d $SOURCE_DIR ]; then
     echo -e "ERROR:: $SOURCE_DIR does not exist"
