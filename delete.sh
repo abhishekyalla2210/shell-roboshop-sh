@@ -45,13 +45,15 @@ fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -type f )
 
-if [ ! -z "$(FILES)" ];
- then
+if [ ! -z "$(FILES)" ]; then
 echo "files found:$FILES"
 TIMESTAMP=$(date +%F-%H-%M)
 ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.zip"
 echo "zip file name:$ZIP_FILE_NAME"
-find $SOURCE_DIR -name "*.log" -type f  | zip -@ -j "$ZIP_FILE_NAME"
+find $FILES  | zip -@ -j "$ZIP_FILE_NAME"
+else 
+    echo "files missing"
+fi
 
 if [ -f $ZIP_FILE_NAME ];
 then
