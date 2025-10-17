@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DISK_USAGE=$(df -hT | grep -v filesystem)
-DISK_THRESHOLD=2
+DISK_THRESHOLD=2  
 MESSAGE=""
 
 while IFS= read -r line
@@ -11,6 +11,7 @@ do
     PARTITION=$(echo $line | awk '{print $7}')
 
     if [ $USAGE -ge "$DISK_THRESHOLD" ]; then
-        echo "high usage $PARTITION: $USAGE"
+        MESSAGE="high usage $PARTITION: $USAGE"
     fi
 done <<< $DISK_USAGE
+echo -e "message body: $MESSAGE
