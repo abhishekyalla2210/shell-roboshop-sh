@@ -45,7 +45,7 @@ fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -type f )
 
-if [ ! -z $FILES ];
+if [ ! -z "$(FILES)" ];
  then
 echo "files found:$FILES"
 TIMESTAMP=$(date +%F-%H-%M)
