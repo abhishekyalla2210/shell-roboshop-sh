@@ -12,7 +12,7 @@ DEST_DIR=$2
 
 LOGS_FOLDER="/var/log/shell-script"
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
-LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log" # /var/log/shell-script/16-logs.log
+LOG_FILE="$LOGS_FOLDER/backup.log" # /var/log/shell-script/16-logs.log
 
 mkdir -p $LOGS_FOLDER
 echo "Script started executed at: $(date)" | tee -a $LOG_FILE
@@ -55,8 +55,7 @@ else
     echo "files missing"
 fi
 
-if [ -f $ZIP_FILE_NAME ];
-then
+if [ -f $ZIP_FILE_NAME ];then
     echo "Archival success"
 
     while IFS= read -r filepath
@@ -70,9 +69,5 @@ else
     echo "archeiving failure"
 exit 1
 fi
-else
 
-echo "no files to achieve....skipping"
-fi
 
-    
