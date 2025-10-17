@@ -23,7 +23,7 @@ if [ $USERID -ne 0 ]; then
 fi
 
 USAGE(){
-    echo -e "$R USAGE:: sudo sh 24-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS>[optional, default 14 days] $N"
+    echo -e "$R USAGE:: sudo s h backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS>[optional, default 14 days] $N"
     exit 1
 }
 
@@ -45,7 +45,7 @@ if [ ! -d $DEST_DIR ]; then
 fi
 
 ### Find the files ####
-FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
+FILES=$(find $SOURCE_DIR -name "*.log" -type f )
 
 
 if [ ! -z "${FILES}" ]; then
