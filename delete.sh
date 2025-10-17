@@ -30,7 +30,7 @@ if [ $# -lt 2 ]; then
 fi
 
 
-SOURCE_DIR=/home/ec2-user/app-logs
+SOURCE_DIR=/home/ec2-user/source_dir
 DEST_DIR=/home/ec2-user/dest-file
 
 if [ ! -d $SOURCE_DIR ]; then
