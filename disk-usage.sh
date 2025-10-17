@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DISK_USAGE=$(df -hT | grep -v filesystem)
-DISK_THRESHOLD=6
+DISK_THRESHOLD=2
 MESSAGE=""
 
 while IFS= read -r line
