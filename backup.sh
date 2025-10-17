@@ -5,6 +5,8 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 USER_ID=$(id -u)
+SOURCE_DIR=$1
+DEST_DIR=$2
 
 LOGS_FOLDER="var/log/shell-script"
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
@@ -22,10 +24,20 @@ fi
 
 USAGE(){
 echo "USAGE: sudo sh backup"
-
-
 }
 
 if [ $# -lt 2 ]; then
-USAGE
+  USAGE
+fi
   
+  if [ ! -d $SOURCE_DIR ]; then
+    echo "source does not exist"
+    exit 1
+  fi
+
+
+if [ ! -d $DEST_DIR ]; then
+    echo "dest does not exist"
+    exit 1
+  fi
+
