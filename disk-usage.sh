@@ -14,4 +14,4 @@ do
         MESSAGE="high usage $PARTITION: $USAGE"
     fi
 done <<< $DISK_USAGE
-echo -e "message body: $MESSAGE
+echo -e "message body: $MESSAGE"
